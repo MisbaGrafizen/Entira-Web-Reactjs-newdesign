@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  width: 100%;
+}
+.font-mulish{
+font-family: 'Mulish';
+}
+.font-philospher{
+  font-family: 'Philosopher';
+}
+
+.custom-shadow {
+  box-shadow: 1px 4px 45px rgb(219 212 212), 1px 0px 45px rgb(231 221 221)
+}
+.custombg{
+  background-image: url(../public/imgeNew/exportcollection/jwellery.jpg);
+  background-size: 100% 100%;
+
+}
