@@ -15,10 +15,10 @@ export default function ExploreCollection() {
                 <img className='w-[100%] absolute md:flex hidden z-[-10] md:h-[70vh] opacity-[0.6]' src={backimg} />
                 <img className='w-[100%] absolute md:hidden flex z-[-10] md:h-[56vh] opacity-[0.6]' src={backimg2} />
                 <div className='w-[100%] flex  py-[20px] gap-[15px] md:pt-[5%] pt-[6%] flex-col mx-auto z-[20]'>
-                    <div className=' text-center md:text-[60px] text-[50px] text-[#fae3e3] font-philospher font-[900]' style={{ fontWeight: 'bold', lineHeight: '1.3' }}>
+                    <div className=' text-center md:text-[60px] text-[40px] text-[#523c36] font-philospher font-[900]' style={{ fontWeight: 'bold', lineHeight: '1.3' }}>
                         <p>Explore Collections</p>
                     </div>
-                    <div className=' font-mulish md:w-[50%] flex text-center mx-auto  text-[#494242] ' >
+                    <div className=' font-mulish md:w-[50%] w-[88%] flex text-center mx-auto  text-[#494242] ' >
                             <p>Immerse yourself in our curated selection of exquisite jewelry, designed to combine timeless elegance with modern flair.</p>
                         </div>
 

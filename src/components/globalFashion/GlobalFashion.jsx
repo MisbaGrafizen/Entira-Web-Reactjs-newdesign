@@ -2,6 +2,8 @@ import React from 'react'
 
 import mainImg from '../../../public/imgeNew/add.png'
 import sec1 from '../../../public/newUpload/landing-2/flower.png'
+import ring from '../../../public/mihirsirVector/ring.png'
+
 
 
 export default function GlobalFashion() {
@@ -31,9 +33,9 @@ export default function GlobalFashion() {
                         
                             <img className='rounded-[15px] md:w-[490px]' src={mainImg} />
                    
-                        <div className='md:w-[80%] custom-shadow  md:top-[75%] md:left-[-30%] absolute  py-[20px] text-[#928380] px-[38px] bg-[#F8F2F0] rounded-[7px]'>
+                        <div className='md:w-[80%] custom-shadow2  md:top-[75%] md:left-[-30%] absolute  py-[20px] text-[#928380] px-[38px] bg-[#F8F2F0] rounded-[7px]'>
                             <div className='flex gap-[10px] flex-col'>
-                                <img className='w-[60px] h-[60px] mx-auto' src={sec1} />
+                                <img className='w-[60px] h-[60px] mx-auto' src={ring} />
                                 <p className='text-[27px] leading-[30px] text-center font-philospher font-[600]'>
                                 Expert Jewelry Craft
                                 </p>

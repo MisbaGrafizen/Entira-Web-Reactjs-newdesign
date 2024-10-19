@@ -18,14 +18,14 @@ export default function NewCollection() {
 
                         <div className=' text-[30px] text-[#3d3a3a] font-philospher  pt-[20px] text-center font-[900]'>
                             <p>
-                                Bestselling Designs
+                                BestSelling Designs
                             </p>
                         </div>
                         <div className='w-[100px] border-t-[2px] text-center mx-auto border-[#eebca3]'>
 
                         </div>
                     </div>
-                    <div className='md:w-[100%] px-[30px] pb-[30px] flex md:flex-row flex-col gap-[10px] '>
+                    <div className='md:w-[100%] px-[30px] md:pb-[30px] pb-[30px] flex md:flex-row flex-col gap-[10px] '>
                         <div className='md:w-[25%] rounded-[10px] p-[25px] hover:bg-[#fff3ec] transition duration-300  '>
                             <img className=' md:max-w-[1500px] rounded-[10px]' src={category1} />
                             <div className=' bg-[#eebca3] text-white rounded-[10px] py-[10px] mt-[25px] mx-auto text-center w-[130px]'>

@@ -2,6 +2,9 @@ import React from 'react'
 
 import desktopback from '../../../public/imgeNew/lanMain.png'
 import mobileback from '../../../public/imgeNew/mainmobilelan/mainlan.png'
+import shop from '../../../public/mihirsirVector/shop.png'
+import service from '../../../public/mihirsirVector/Hathora.png'
+import diamond from '../../../public/newUpload/landing-2/diamond.png'
 
 import sec2 from '../../../public/newUpload/landing-2/flower.png'
 
@@ -34,7 +37,7 @@ export default function Landing() {
                     <div className='w-[100%] flex flex-wrap md100:flex-nowrap pt-[190%] md:pt-[0px] md100:top-[90px] md100:relative gap-[20px]'>
                         <div className='w-[100%] md:w-[48%] lg:w-[24%] py-[25px] text-[#928380] px-[38px] bg-[#F8F2F0] rounded-[7px]'>
                             <div className='flex gap-[20px] flex-col'>
-                                <img className='w-[60px] h-[60px] mx-auto' src={sec2} />
+                                <img className='w-[60px] h-[60px] mx-auto' src={shop} />
                                 <p className='text-[30px] leading-[30px] text-center font-philospher font-[600]'>
                                     Global Sourcing
                                 </p>
@@ -56,7 +59,7 @@ export default function Landing() {
                         </div>
                         <div className='w-[100%] md:w-[48%] lg:w-[24%] py-[25px] text-[#928380] px-[38px] bg-[#F8F2F0] rounded-[7px]'>
                             <div className='flex gap-[20px] flex-col'>
-                                <img className='w-[60px] h-[60px] mx-auto' src={sec2} />
+                                <img className='w-[60px] h-[60px] mx-auto' src={service} />
                                 <p className='text-[30px] leading-[30px] text-center font-philospher font-[600]'>
                                 Custom Jewelry Design
                                 </p>
@@ -67,7 +70,7 @@ export default function Landing() {
                         </div>
                         <div className='w-[100%] md:w-[48%] lg:w-[24%] py-[25px] text-[#928380] px-[38px] bg-[#F8F2F0] rounded-[7px]'>
                             <div className='flex gap-[20px] flex-col'>
-                                <img className='w-[60px] h-[60px] mx-auto' src={sec2} />
+                                <img className='w-[60px] h-[60px] mx-auto' src={diamond} />
                                 <p className='text-[30px] leading-[30px] text-center font-philospher font-[600]'>
                                 Global Shipping & Logistics
                                 </p>

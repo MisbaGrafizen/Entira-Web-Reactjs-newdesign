@@ -13,8 +13,12 @@ font-family: 'Mulish';
   font-family: 'Philosopher';
 }
 
+
 .custom-shadow {
-  box-shadow: 1px 4px 45px rgb(219 212 212), 1px 0px 45px rgb(231 221 221)
+  box-shadow: 1px 4px 20px rgb(233, 233, 233), 1px 0px 20px rgb(255, 247, 247)
+}
+.custom-shadow2 {
+  box-shadow: 1px 4px 20px rgb(234, 233, 233), 1px 0px 20px rgb(224, 224, 224)
 }
 .custombg{
   background-image: url(../public/imgeNew/exportcollection/jwellery.jpg);
