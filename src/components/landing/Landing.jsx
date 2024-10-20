@@ -34,7 +34,7 @@ export default function Landing() {
                         </div>
 
                     </div>
-                    <div className='w-[100%] flex flex-wrap md100:flex-nowrap pt-[190%] md:pt-[0px] md100:top-[90px] md100:relative gap-[20px]'>
+                    <div className='w-[100%] flex flex-wrap md100:flex-nowrap pt-[228%] md:pt-[0px] md100:top-[90px] md100:relative gap-[20px]'>
                         <div className='w-[100%] md:w-[48%] lg:w-[24%] py-[25px] text-[#928380] px-[38px] bg-[#F8F2F0] rounded-[7px]'>
                             <div className='flex gap-[20px] flex-col'>
                                 <img className='w-[60px] h-[60px] mx-auto' src={shop} />

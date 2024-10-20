@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
     return (
         <>
-            <div className='w-[100%] bg-[#F8F2F0] mx-auto relative mt-[80px] h-[83vh] md:h-[45vh] py-[20px] '>
+            <div className='w-[100%] bg-[#F8F2F0] mx-auto relative mt-[80px] h-[95vh] md:h-[45vh] py-[20px] '>
                 <div className='w-[88%] pt-[30px] gap-[30px] md:gap-[0px] absolute shadow-2xl top-[-15%] custom-shadow left-0 right-0    pb-[40px] flex md:flex-row flex-col px-[30px]  rounded-[10px] justify-between mx-auto bg-white'>
                     <div className='md:w-[40%] md:h-[30%] flex flex-col gap-[10px] '>
                         <p className='text-[30px] text-[#928380] flex z-10  font-philospher font-[900]'>
@@ -72,7 +72,7 @@ export default function Footer() {
 
                 </div>
                 <div>
-                    <p className=' font-mulish w-[100%] text-[#928380] mx-auto text-center absolute bottom-[20px]'>
+                    <p className=' font-mulish text-[13px] md:text-[20px] w-[88%] flex justify-center left-0 right-0  md:w-[100%] text-[#928380] mx-auto text-center absolute bottom-[1px] md:bottom-[20px]'>
                     © 2024 All Rights Reserved by Entira Jewelry || Designed and Developed with ❤️ by Grafizen International LLC
                     </p>
                 </div>
