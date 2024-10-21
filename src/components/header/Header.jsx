@@ -8,7 +8,7 @@ export default function Header() {
         <>
 
             <div className='w-[100%]  '>
-                <div className={`fixed left-0 right-0 md:w-[88%]  md:rounded-[8px] h-[85px] flex md:mx-auto items-center z-[5000] bg-[#FFFFFF] transition-all  duration-300 top-[-0px] md:top-[16px]`}>
+                <div className={`fixed left-0 right-0 md:w-[88%]  md:rounded-[8px] h-[85px] flex md:mx-auto items-center z-[5000] bg-[#fcf3f3] transition-all  duration-300 top-[-0px] md:top-[16px]`}>
                     <div className='mx-auto w-[100%]'>
                         <img className='md:w-[200px] w-[160px] ml-[2%]  md:mx-auto' src={logo} />
                     </div>

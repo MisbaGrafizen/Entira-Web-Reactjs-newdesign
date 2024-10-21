@@ -8,6 +8,7 @@ import arrival5 from '../../../public/imgeNew/new-arrival/arrival-5.png'
 import arrival6 from '../../../public/imgeNew/new-arrival/arrival-6.png'
 import arrival7 from '../../../public/imgeNew/new-arrival/arrival-7.png'
 import arrival8 from '../../../public/imgeNew/new-arrival/arrival-8.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -30,6 +31,7 @@ export default function LatestTrends() {
                         </div>
 
                     </div>
+                    <Link to={"/trends"}>
                     <div className='w-[100%] flex flex-col gap-[]4px'>
 
                         <div className='md:w-[100%] w-[90%]  mx-auto md:pb-[30px] pb-[30px] flex md:flex-row flex-col gap-[10px] '>
@@ -148,7 +150,7 @@ export default function LatestTrends() {
                     </div>
                 </div> */}
                         </div>
-                    </div>
+                    </div></Link>
                 </div>
             </section>
 
