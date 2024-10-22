@@ -15,7 +15,7 @@ export default function NewCollection() {
           <div className="w-[100%] flex  flex-col gap-[30px] ">
             <div className="w-[100%] flex flex-col gap-[16px] justify-center">
               <div className=" text-[30px] text-[#3d3a3a] font-philospher  pt-[20px] text-center font-[900]">
-                <p>BestSelling Designs</p>
+                <p>Best Selling Designs</p>
               </div>
               <div className="w-[100px] border-t-[2px] text-center mx-auto border-[#eebca3]"></div>
             </div>

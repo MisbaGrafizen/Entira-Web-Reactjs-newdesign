@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <p className=" font-mulish text-[13px] md:text-[16px] w-[88%] flex  md39:mt-[150%] justify-center pb-[20px] md:pb-[0px]  md:w-[100%] mt-[166%] md:mt-[14%] lg:mt-[22%] 2xl:mt-[16%] text-[#928380] mx-auto text-center  bottom-[1px] md:bottom-[20px]">
+            <p className=" font-mulish text-[13px] md:text-[16px] w-[88%] flex  md39:mt-[150%] justify-center pb-[20px] md:pb-[20px]  md:w-[100%] mt-[166%] md:mt-[14%] lg:mt-[22%] 2xl:mt-[16%] text-[#928380] mx-auto text-center  bottom-[1px] md:bottom-[20px]">
               © 2024 All Rights Reserved by Entira Jewelry || Designed and
               Developed with ❤️ by Grafizen International LLC
             </p>

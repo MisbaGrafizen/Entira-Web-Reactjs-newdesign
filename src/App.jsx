@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Collection from './pages/Colection/Collection'
 
+
 function App() {
 
 
@@ -14,7 +15,7 @@ function App() {
 
 
         <Route path='/' element={<Home />} />
-        <Route path='/trends' element={<Collection />} />
+        <Route path='/latest-trends' element={<Collection />} />
 
       </Routes>
 

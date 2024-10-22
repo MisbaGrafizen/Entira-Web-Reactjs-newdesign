@@ -58,21 +58,22 @@ import arrival53 from "../../../public/ENTIRA/arrival53.png";
 import arrival54 from "../../../public/ENTIRA/arrival54.png";
 // import arrival55 from "../../../public/ENTIRA/arrival55.png";
 import arrival56 from "../../../public/ENTIRA/arrival56.png";
-// import arrival57 from "../../../public/ENTIRA/arrival57.png";
-// import arrival58 from "../../../public/ENTIRA/arrival58.png";
-// import arrival59 from "../../../public/ENTIRA/arrival59.png";
-// import arrival60 from "../../../public/ENTIRA/arrival60.png";
-// import arrival61 from "../../../public/ENTIRA/arrival61.png";
-// import arrival62 from "../../../public/ENTIRA/arrival62.png";
-// import arrival63 from "../../../public/ENTIRA/arrival63.png";
-// import arrival64 from "../../../public/ENTIRA/arrival64.png";
-// import arrival65 from "../../../public/ENTIRA/arrival65.png";
-// import arrival66 from "../../../public/ENTIRA/arrival66.png";
-// import arrival67 from "../../../public/ENTIRA/arrival67.png";
-// import arrival68 from "../../../public/ENTIRA/arrival68.png";
-// import arrival69 from "../../../public/ENTIRA/arrival69.png";
-// import arrival70 from "../../../public/ENTIRA/arrival70.png";
-// import arrival71 from "../../../public/ENTIRA/arrival71.png";
+import Loader from '../../components/loder/Loader';
+import arrival57 from "../../../public/ENTIRA/arrival57.png";
+import arrival58 from "../../../public/ENTIRA/arrival58.png";
+import arrival59 from "../../../public/ENTIRA/arrival59.png";
+import arrival60 from "../../../public/ENTIRA/arrival60.png";
+import arrival61 from "../../../public/ENTIRA/arrival61.png";
+import arrival62 from "../../../public/ENTIRA/arrival62.png";
+import arrival63 from "../../../public/ENTIRA/arrival63.png";
+import arrival64 from "../../../public/ENTIRA/arrival64.png";
+import arrival65 from "../../../public/ENTIRA/arrival65.png";
+import arrival66 from "../../../public/ENTIRA/arrival66.png";
+import arrival67 from "../../../public/ENTIRA/arrival67.png";
+import arrival68 from "../../../public/ENTIRA/arrival68.png";
+import arrival69 from "../../../public/ENTIRA/arrival69.png";
+import arrival70 from "../../../public/ENTIRA/arrival70.png";
+import arrival71 from "../../../public/ENTIRA/arrival71.png";
 // import arrival72 from "../../../public/ENTIRA/arrival72.png";
 // import arrival73 from "../../../public/ENTIRA/arrival73.png";
 // import arrival74 from "../../../public/ENTIRA/arrival74.png";
@@ -104,27 +105,30 @@ export default function Collection() {
     arrival7,
     arrival8,
     arrival9,
-    arrival10,
+    arrival19,
     arrival11,
     arrival12,
     arrival13,
     arrival14,
     arrival15,
-    arrival16,
-    arrival17,
+  
+    arrival10,
     arrival18,
-    arrival19,
-    arrival20,
-    arrival21,
-    arrival22,
+   
+
+  
+
     arrival23,
     arrival24,
+    arrival16,
     arrival25,
+    arrival20,
+ 
+  
+
+ 
     arrival26,
-    arrival27,
-    arrival25,
-    arrival26,
-    arrival27,
+  
     arrival28,
     arrival29,
     arrival30,
@@ -133,41 +137,43 @@ export default function Collection() {
     arrival33,
     arrival34,
     arrival35,
-    arrival36,
-    arrival37,
-    arrival38,
-    arrival39,
+ 
+  
+
+
     arrival40,
     arrival41,
     arrival42,
-    arrival43,
+    arrival51,
     arrival44,
     arrival45,
-    arrival46,
     arrival47,
+    arrival36,
     arrival48,
     arrival49,
     arrival50,
-    arrival51,
+   
     arrival52,
     arrival53,
     arrival54,
     arrival56,
-    // arrival57,
-    // arrival58,
-    // arrival59,
-    // arrival60,
-    // arrival61,
-    // arrival62,
-    // arrival63,
-    // arrival64,
-    // arrival65,
-    // arrival66,
-    // arrival67,
-    // arrival68,
-    // arrival69,
-    // arrival70,
-    // arrival71,
+    arrival57,
+    arrival67,
+    arrival58,
+    arrival59,
+    arrival70,  
+    arrival60,
+    arrival61,
+    arrival62,
+    arrival63,
+    arrival64,
+  
+    arrival66,
+ 
+    arrival68,
+    arrival69,
+  
+    arrival71,
     // arrival72,
     // arrival73,
     // arrival74,
@@ -183,20 +189,32 @@ export default function Collection() {
   ];
 
   // State and Ref to track the section visibility
-  const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(false);
   const sectionRef = useRef(null);
 
   // Scroll to top when the page loads or refreshes
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top on load
+    window.scrollTo(0, 0);
   }, []);
 
+  // Simulate loader timeout for 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Hide loader after 3 seconds
+      setIsContentVisible(true); // Show content after loader is hidden
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
+  // Intersection Observer for lazy loading section content
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setIsContentVisible(true);
           observer.disconnect(); // Stop observing after the section is visible
         }
       },
@@ -216,52 +234,59 @@ export default function Collection() {
 
   return (
     <>
-      <Header />
-      <section
-        ref={sectionRef}
-        className={`md:w-[88%] w-[97%] relative md:top-[90px] gap-[20px] flex flex-col top-[80px]  bg-[#fff] mx-auto rounded-[15px] h-[100%] ${
-          isVisible ? "section-visible" : "section-hidden"
-        }`}
-      >
-        <div className="w-[100%] flex flex-col gap-[30px]">
-          <div className="w-[100%] flex flex-col gap-[16px] justify-center">
-            <div className="md:text-[50px] text-[40px] text-[#928380] font-philospher pt-[20px] text-center font-[900]">
-              <p>Latest Trends</p>
+    {isLoading ? (
+      <Loader />
+    ) : (
+      <>
+        <Header />
+        <section
+          ref={sectionRef}
+          className={`md:w-[88%] w-[97%] relative md:top-[90px] gap-[20px] flex flex-col top-[80px]  bg-[#fff] mx-auto rounded-[15px] h-[100%] ${
+            isContentVisible ? 'section-visible' : 'section-hidden'
+          }`}
+        >
+          <div className="w-[100%] flex flex-col gap-[30px]">
+            <div className="w-[100%] flex flex-col gap-[16px] justify-center">
+              <div className="md:text-[50px] text-[40px] text-[#928380] font-philospher pt-[20px] text-center font-[900]">
+                <p>Latest Trends</p>
+              </div>
+              <div className="font-mulish md:w-[50%] w-[88%] flex text-center !font-[200] mx-auto text-[#b9aeac]">
+                <p>
+                  Immerse yourself in our curated selection of exquisite jewelry,
+                  designed to combine timeless elegance with modern flair.
+                </p>
+              </div>
             </div>
-            <div className="font-mulish md:w-[50%] w-[88%] flex text-center !font-[200] mx-auto  text-[#b9aeac]">
-              <p>
-                Immerse yourself in our curated selection of exquisite jewelry,
-                designed to combine timeless elegance with modern flair.
-              </p>
+
+            <div className="w-[100%] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-[16px]">
+              {arrivals.map((arrival, index) => (
+                <div
+                  key={index}
+                  className="p-[15px] rounded-[10px] hover:bg-[#fff3ec] transition duration-300"
+                >
+                  <img
+                    className="w-full h-auto rounded-[10px]"
+                    src={arrival}
+                    alt={`arrival-${index + 1}`}
+                  />
+                  <div className="bg-[#eebca3] text-white px-[5px] cursor-pointer rounded-[6px] text-[15px] md:rounded-[10px] py-[5px] md:py-[10px] mt-[25px] mx-auto text-center w-[110px] md:w-[130px]">
+                    <a
+                      href="https://wa.me/917567399311"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      INQUIRE NOW
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="w-[100%] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-[16px]">
-            {arrivals.map((arrival, index) => (
-              <div
-                key={index}
-                className="p-[15px] rounded-[10px] hover:bg-[#fff3ec] transition duration-300"
-              >
-                <img
-                  className="w-full h-auto rounded-[10px]"
-                  src={arrival}
-                  alt={`arrival-${index + 1}`}
-                />
-                <div className="bg-[#eebca3] text-white px-[5px] cursor-pointer rounded-[6px] text-[15px] md:rounded-[10px] py-[5px] md:py-[10px] mt-[25px] mx-auto text-center w-[110px] md:w-[130px]">
-                  <a
-                    href="https://wa.me/917567399311"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    INQUIRE NOW
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <Footer className="" />
-      </section>
-    </>
+          <Footer />
+        </section>
+      </>
+    )}
+  </>
   );
 }
