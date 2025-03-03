@@ -13,7 +13,7 @@ export default function Header() {
                         <img className='md:w-[200px] w-[160px] ml-[2%]  md:mx-auto' src={logo} />
                     </div>
                     <div className='md:w-[110px] w-[80px]  text-[#F8F2F0] text-center  md:right-[2%] right-[3%] absolute text-[14px] rounded-[6px] h-[40px] flex items-center bg-[#D0A38D]'>
-                    <a href='mailto:office@entira.com'>Email us</a>
+                    <a href='mailto:office@entira.co'>Email us</a>
                     </div>
                 </div>
             </div>

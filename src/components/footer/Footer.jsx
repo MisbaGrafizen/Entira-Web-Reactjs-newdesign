@@ -11,7 +11,7 @@ export default function Footer() {
               </p>
               <div className="flex  font-mulish font-[100]  text-[#928380] items-center text-left gap-[10px]">
                 <i className="fa-solid w-[20px] fa-envelope"></i>
-                <p className="flex text-left">office@entira.com</p>
+                <a href='mailto:office@entira.co' className="flex text-left">office@entira.co</a>
               </div>
               <div className="flex  text-[#928380] items-center text-left gap-[10px]">
                 <i className="fa-solid w-[20px] fa-phone-volume"></i>
